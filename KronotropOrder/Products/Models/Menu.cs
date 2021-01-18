@@ -16,8 +16,8 @@ namespace KronotropOrder.Products.Models
             //Default additionların eklenmesi
             Additions = new List<Addition>();
             Additions.Add(new Addition { Id = 1, Name = "Milk" });
-            Additions.Add(new Addition { Id = 1, Name = "Chocalate sauce" });
-            Additions.Add(new Addition { Id = 1, Name = "Hazelnut Syrup" });
+            Additions.Add(new Addition { Id = 2, Name = "Chocalate sauce" });
+            Additions.Add(new Addition { Id = 3, Name = "Hazelnut Syrup" });
 
         }
         public List<Beverage> Beverages { get; private set; }
