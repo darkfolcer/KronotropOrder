@@ -23,7 +23,6 @@ namespace KronotropOrder
         {
            
             services.AddControllers();
-            services.AddScoped<IMenuService, MenuService>();
             services.AddScoped<IOrderService, OrderService>();
             services.AddScoped<IBeverageService, BeverageService>();
             services.AddScoped<IAdditionService, AdditionService>();
