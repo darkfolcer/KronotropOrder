@@ -19,14 +19,14 @@ namespace KronotropOrder.Products.Services
         }
         public OrderList AddNewOrderItem(Order item)
         {
-            _orders.Items.Add(item);
+            _orders.items.Add(item);
             return _orders;
         }
 
         public OrderList RemoveOrderItem(int itemId)
         {
-            var orderItem = _orders.Items.FirstOrDefault(x => x.Id == itemId);
-            _orders.Items.Remove(orderItem);
+            var orderItem = _orders.items.FirstOrDefault(x => x.Id == itemId);
+            _orders.items.Remove(orderItem);
             return _orders;
         }
 

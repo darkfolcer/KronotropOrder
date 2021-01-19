@@ -22,9 +22,10 @@ namespace KronotropOrder.Products.Services
         {
             return tempData;
         }
-        public void Add(Beverage beverage)
+        public List<Beverage> Add(Beverage beverage)
         {
             tempData.Add(beverage);
+            return tempData;
         }
    
 
@@ -33,9 +34,10 @@ namespace KronotropOrder.Products.Services
            return GetAll().FirstOrDefault(x => x.Id == id);
         }
 
-        public void Remove(Beverage beverage)
+        public List<Beverage> Remove(Beverage beverage)
         {
-            GetAll().Remove(beverage);
+            tempData.Remove(beverage);
+            return tempData;
         }
     }
 }

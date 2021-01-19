@@ -7,7 +7,7 @@ namespace KronotropOrder.Products.Interfaces
     {
         public List<Beverage> GetAll();
         public Beverage GetById(int id);
-        public void Add(Beverage beverage);
-        public void Remove(Beverage beverage);
+        public List<Beverage> Add(Beverage beverage);
+        public List<Beverage> Remove(Beverage beverage);
     }
 }

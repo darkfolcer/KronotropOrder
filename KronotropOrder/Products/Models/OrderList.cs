@@ -8,9 +8,9 @@ namespace KronotropOrder.Products.Models
 
         public OrderList()
         {
-            Items = new List<Order>();
+            items = new List<Order>();
         }
 
-        public IList<Order> Items { get; private set; }
+        public List<Order> items { get; private set; }
     }
 }

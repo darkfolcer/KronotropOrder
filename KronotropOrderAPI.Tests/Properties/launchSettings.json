@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "KronotropOrderAPI.Tests": {
+      "commandName": "Project",
+      "nativeDebugging": true
+    }
+  }
+}

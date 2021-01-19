@@ -14,12 +14,13 @@ namespace KronotropOrder.Products.Services
         {
             tempData = new List<Addition>();
             tempData.Add(new Addition { Id = 1, Name = "Milk" });
-            tempData.Add(new Addition { Id = 1, Name = "Chocalate sauce" });
-            tempData.Add(new Addition { Id = 1, Name = "Hazelnut Syrup" });
+            tempData.Add(new Addition { Id = 2, Name = "Chocalate sauce" });
+            tempData.Add(new Addition { Id = 3, Name = "Hazelnut Syrup" });
         }
-        public void Add(Addition addition)
+        public List<Addition> Add(Addition addition)
         {
             tempData.Add(addition);
+            return tempData;
         }
 
         public List<Addition> GetAll()
@@ -32,9 +33,10 @@ namespace KronotropOrder.Products.Services
            return GetAll().FirstOrDefault(x => x.Id == id);
         }
 
-        public void Remove(Addition addition)
+        public List<Addition> Remove(Addition addition)
         {
-            GetAll().Remove(addition);
+            tempData.Remove(addition);
+            return tempData;
         }
     }
 }

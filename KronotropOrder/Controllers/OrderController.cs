@@ -2,6 +2,7 @@
 using KronotropOrder.Products.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace KronotropOrder.Controllers
 {
@@ -34,15 +35,15 @@ namespace KronotropOrder.Controllers
              * Additionları Queryden integer array olarak alıyorum ve listeye çevirip orders'a ekliyorum.
              * Örneğin 2x milk için addition listte 2xMilk olacak. 
              */
-
+            List<int> additionIdsList = additionIds.OfType<int>().ToList();
             List<Addition> additions = new List<Addition>();
-            for (int i = 0; i < additionIds.Length; i++)
+            foreach (int i in additionIdsList)
             {
-                additions.Add(_additionService.GetById(additionIds[i]));
+                additions.Add(_additionService.GetById(i));
             }
 
            var _beverage = _beverageService.GetById(beverageId);
-           return _orderService.AddNewOrderItem(new Order { beverage = _beverage, addition = additions });
+           return _orderService.AddNewOrderItem(new Order { Id =1, beverage = _beverage, addition = additions });
         }
         [HttpGet]
         [Route("/api/orders/remove")]

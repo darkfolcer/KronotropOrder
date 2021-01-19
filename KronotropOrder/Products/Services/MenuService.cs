@@ -15,5 +15,17 @@ namespace KronotropOrder.Products.Services
         {
             return _menu;
         }
+
+        public Menu AddNewAddition(Addition addition)
+        {
+            _menu.Additions.Add(addition);
+            return _menu;
+        }
+
+        public Menu AddNewBeverage(Beverage beverage)
+        {
+            _menu.Beverages.Add(beverage);
+            return _menu;
+        }
     }
 }

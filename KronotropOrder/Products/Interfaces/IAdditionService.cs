@@ -9,7 +9,7 @@ namespace KronotropOrder.Products.Interfaces
     {
         public List<Addition> GetAll();
         public Addition GetById(int id);
-        public void Add(Addition addition);
-        public void Remove(Addition addition);
+        public List<Addition> Add(Addition addition);
+        public List<Addition> Remove(Addition addition);
     }
 }
